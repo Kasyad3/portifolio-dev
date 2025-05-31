@@ -69,6 +69,18 @@ header {
     2px 2px 5px rgba(94, 104, 121, 0.288);
 }
 
+@keyframes magnetico {
+  0% { transform: skewX(0deg); }
+  25% { transform: skewX(10deg); }
+  50% { transform: skewX(-10deg); }
+  75% { transform: skewX(5deg); }
+  100% { transform: skewX(0deg); }
+}
+
+.home-img {
+  animation: magnetico 2s infinite ease-in-out;
+}
+
 header.shadow {
   box-shadow: 0 0 4px rgb(14 55 54 / 15%);
 }
@@ -114,18 +126,7 @@ header.shadow {
 .navbar a:hover {
   color: var(--hover);
 }
-/* TOAD MOVENDO */
- .home-img {
-      position: relative;
-      animation: mover 7s infinite alternate;
-      font-size: 24px;
-      color: #333;
-    }
 
-    @keyframes mover {
-      0% { left: 0; }
-      100% { left: 50px; }
-    }
 /* KIRBY CRESCENDO */
 .about-img {
   transition: transform 0.5s;
@@ -205,7 +206,7 @@ header.shadow {
 
 @keyframes cursor {
   0%, 100% { border-color: transparent; }
-  50% { border-color: black; }
+  50% { border-color: transparent; }
 }
 
 .home-text h1 {
